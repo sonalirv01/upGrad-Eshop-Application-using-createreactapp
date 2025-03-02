@@ -3,3 +3,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
+.iconbtnwrap{display: flex; justify-content: center;}
+.typographyleft{display: flex; justify-content: left;}
+.typographyright{display: flex; justify-content: right;}
+.cardmedia{height: 400px; width: 345px;}
+.imgmedia{width: 100%;
+    height: 100%;
+    object-fit: cover;}

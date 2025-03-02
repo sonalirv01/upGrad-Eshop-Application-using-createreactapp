@@ -14,6 +14,7 @@ import useServices from "../../hooks/useServices";
 import ItemDetail from "../itemDetail/ItemDetail";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
+import "./placeorder.css";
 
 const PlaceOrder = () => {
 
@@ -163,7 +164,7 @@ const PlaceOrder = () => {
 		<Box sx={{flexGrow: 1}}>
 			<Grid container spacing={3}>
 				<Grid item xs={12}>
-					<div style={{display: 'flex', justifyContent: 'center'}}>
+					<div className="stepper-item">
 						<Stepper 
 							activeStep={activeStep}
 							sx={{width: "80%"}}
@@ -192,7 +193,7 @@ const PlaceOrder = () => {
 				{
 					activeStep === 0 &&
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="stepper-item">
 							<ItemDetail
 								productQuantity={orderDetails.quantity}
 								selectedProduct={json.product}
@@ -203,7 +204,7 @@ const PlaceOrder = () => {
 				{
 					activeStep === 1 &&
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="stepper-item">
 							<Address
 								callbackFunction={saveAddressForDelivery}
 								address={orderDetails.addressObject}
@@ -214,7 +215,7 @@ const PlaceOrder = () => {
 				{
 					activeStep === 2 &&
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="stepper-item">
 							<OrderDetails
 								quantity={orderDetails.quantity}
 								product={json.product}
@@ -224,7 +225,7 @@ const PlaceOrder = () => {
 					</Grid>
 				}
 				<Grid item xs={12}>
-					<div style={{display: 'flex', justifyContent: 'center'}}>
+					<div className="stepper-item">
 						<Button variant="text"
 								color="disabled"
 								onClick={() => moveToPreviousStep()}

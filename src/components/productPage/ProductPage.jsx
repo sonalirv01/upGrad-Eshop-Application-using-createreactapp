@@ -14,7 +14,7 @@ import {initCatalog} from "../../store/actions/metadataAction";
 import {connect} from "react-redux";
 import useServices from "../../hooks/useServices";
 import CreatableSelect from "../creatableSelect/CreatableSelect";
-
+import "./productpage.css";
 const ProductPage = ({categories, mode, headingText, buttonText, callbackFunction, jsonData, reFetchAllData}) => {
 
 	jsonData = jsonData || {
@@ -273,7 +273,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 				<Grid container item spacing={3}>
 					<Grid item xs={4}/>
 					<Grid item xs={4}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="typography">
 							<Typography
 								variant="subtitle1"
 								noWrap
@@ -285,7 +285,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								{headingText}
 							</Typography>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="productName"
 								label="Name *"
@@ -298,7 +298,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.name.error && formData.name.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<CreatableSelect
 								id="category"
 								label="Category *"
@@ -312,7 +312,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								options={categories}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="manufacturer"
 								label="Manufacturer *"
@@ -325,7 +325,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.manufacturer.error && formData.manufacturer.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="availableItems"
 								label="Available Items *"
@@ -338,7 +338,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.availableItems.error && formData.availableItems.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="price"
 								label="Price *"
@@ -351,7 +351,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.price.error && formData.price.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="imageUrl"
 								label="Image URL"
@@ -364,7 +364,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.imageUrl.error && formData.imageUrl.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<TextField
 								id="description"
 								label="Product Description"
@@ -377,7 +377,7 @@ const ProductPage = ({categories, mode, headingText, buttonText, callbackFunctio
 								helperText={formData.description.error && formData.description.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfieldarea">
 							<Button
 								variant="contained"
 								color="primary"

@@ -1,0 +1,6 @@
+.lookoutline{display: flex; justify-content: center; margin-top: 10%;}
+.lockoutlinewrap{display: inline-block; border-radius: 60px; padding: 0.6em 0.6em; color: #fff; background-color: #f50057;}
+.typographywrp{display: flex; justify-content: center;}
+.textfeieldarea{display: flex; justify-content: center; margin-top: 30px;}
+.loginwrp{display: flex; justify-content: right; margin-top: 30px;}
+

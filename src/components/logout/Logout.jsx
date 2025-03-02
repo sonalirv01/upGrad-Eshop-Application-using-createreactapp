@@ -6,6 +6,7 @@ import useAuthentication from "../../hooks/useAuthentication";
 import {useContext} from "react";
 import {clearAllMetadata} from "../../store/actions/metadataAction";
 import {connect} from "react-redux";
+import "./logout.css";
 
 const Logout = ({sx, resetMetadata}) => {
 

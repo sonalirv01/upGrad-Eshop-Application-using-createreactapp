@@ -4,6 +4,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import {useState} from "react";
 import {alpha, FormControl, InputAdornment, OutlinedInput} from "@mui/material";
 import {useNavigate, useSearchParams} from "react-router-dom";
+import "./appbarsearch.css";
 const AppBarSearch = () => {
 
 	const navigate = useNavigate();
@@ -23,7 +24,7 @@ const AppBarSearch = () => {
 	}
 
 	return (
-		<FormControl variant="outlined" style={{width: "33%"}}>
+		<FormControl variant="outlined" className='formcontrolwidth'>
 			<OutlinedInput
 				id="search"
 				value={searchFor}

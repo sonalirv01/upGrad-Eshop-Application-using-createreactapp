@@ -14,6 +14,7 @@ import { Navigate } from "react-router-dom";
 import useAuthentication from "../../hooks/useAuthentication";
 import {useNavigate, useLocation} from "react-router-dom";
 import useServices from "../../hooks/useServices";
+import "./login.css";
 
 const Login = () => {
 
@@ -149,16 +150,11 @@ const Login = () => {
 					<Grid container item spacing={3}>
 						<Grid item xs={4}/>
 						<Grid item xs={4}>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "10%"}}>
-								<LockOutlinedIcon style={{
-									display: 'inline-block',
-									borderRadius: '60px',
-									padding: '0.6em 0.6em',
-									color: '#ffffff',
-									background: "#f50057"
-								}}/>
+							<div className="itemlock">
+								<LockOutlinedIcon className="outlinedIcon"/>
+								
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center'}}>
+							<div className="typographywrap">
 								<Typography
 									variant="subtitle1"
 									noWrap
@@ -170,7 +166,7 @@ const Login = () => {
 									Sign in
 								</Typography>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfieldareaso">
 								<TextField id="username"
 										   label="Email Address *"
 										   variant="outlined"
@@ -183,7 +179,7 @@ const Login = () => {
 										   helperText={formData.username.error && formData.username.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfieldareaso">
 								<TextField id="password"
 										   label="Password *"
 										   variant="outlined"
@@ -196,7 +192,7 @@ const Login = () => {
 										   helperText={formData.password.error && formData.password.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfieldareaso">
 								<Button variant="contained"
 										color="primary"
 										fullWidth
@@ -205,7 +201,7 @@ const Login = () => {
 									SIGN IN
 								</Button>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'left', marginTop: "30px"}}>
+							<div className="textfieldarealeft">
 								<Link to="/signup">
 									<Typography variant="body1">
 										Don't have an account? Sign Up

@@ -7,6 +7,8 @@ import ProductCategory from "../productCategory/ProductCategory";
 import Box from "@mui/material/Box";
 import ProductSorting from "../productSorting/ProductSorting";
 import ProductListing from "../productListing/ProductListing";
+import "./home.css";
+
 
 const Home = () => {
 	const {AuthCtx} = useAuthentication();
@@ -18,12 +20,12 @@ const Home = () => {
 			<Grid container spacing={1}>
 				<Grid container item spacing={3}>
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="alinecenterwrap">
 							<ProductCategory />
 						</div>
 					</Grid>
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'left', paddingLeft: "1%"}}>
+						<div className="productsortwrap">
 							<ProductSorting />
 						</div>
 					</Grid>

@@ -4,24 +4,26 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import {Card, CardContent, useTheme} from "@mui/material";
 
+import "./iteamdetail.css";
+
 const ItemDetail = ({productQuantity, selectedProduct}) => {
 
 	const theme = useTheme();
 
 	return (
-		<Card style={{width: "80%"}}>
+		<Card className="cardwidth">
 			<CardContent>
-				<Grid container style={{paddingTop: "5%", paddingBottom: "5%"}}>
+				<Grid container className="itemtop">
 					<Grid item xs={4}/>
 					<Grid item xs={4}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="gridcontainer">
 							<Grid container>
 								<Grid item xs={12}>
 									<Typography variant={"h4"}>
 										{selectedProduct.name}
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="typographypd">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -31,7 +33,7 @@ const ItemDetail = ({productQuantity, selectedProduct}) => {
 										Quantity: <b>{productQuantity}</b>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="typographypd">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -41,7 +43,7 @@ const ItemDetail = ({productQuantity, selectedProduct}) => {
 										category: <b>{selectedProduct.category}</b>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="typographypd">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -52,7 +54,7 @@ const ItemDetail = ({productQuantity, selectedProduct}) => {
 										<em>{selectedProduct.description}</em>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="typographypd">
 									<Typography
 										variant={"body1"}
 										style={{

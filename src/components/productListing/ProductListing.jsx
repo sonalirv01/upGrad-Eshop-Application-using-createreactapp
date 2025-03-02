@@ -15,6 +15,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import {useNavigate, useSearchParams} from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import useServices from "../../hooks/useServices";
+import "./productlisting.css";
 
 const ProductListing = ({mode, productList, sortBy, category, reFetchAllData}) => {
 
@@ -177,7 +178,7 @@ const ProductListing = ({mode, productList, sortBy, category, reFetchAllData}) =
 					products.map((element, index) => {
 						return (
 							<Grid key={"parent_product_" + index} item xs={4}>
-								<div key={"div_product_" + index} style={{display: 'flex', justifyContent: 'center', marginTop: "10%"}}>
+								<div key={"div_product_" + index} className="productcard">
 									<ProductCard
 										key={"product_" + index}
 										mode={mode}
@@ -194,7 +195,7 @@ const ProductListing = ({mode, productList, sortBy, category, reFetchAllData}) =
 				{
 					(products === null || products.length === 0) &&
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="typography">
 							<Typography variant="body1">
 								No products available.
 							</Typography>
@@ -229,8 +230,8 @@ const ProductListing = ({mode, productList, sortBy, category, reFetchAllData}) =
 						<p id="parent-modal-description">
 							Are you sure you want to delete the product?
 						</p>
-						<Button onClick={handleClose} variant={"outlined"} style={{float: "right", marginLeft: 10}}>Cancel</Button>
-						<Button onClick={proceedDelete} variant={"contained"} style={{float: "right", marginLeft: 10}}>Ok</Button>
+						<Button onClick={handleClose} variant={"outlined"} className="ml">Cancel</Button>
+						<Button onClick={proceedDelete} variant={"contained"} className="ml">Ok</Button>
 					</Box>
 				</Modal>
 			}

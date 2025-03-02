@@ -3,24 +3,24 @@
 import {Card, CardContent, useTheme} from "@mui/material";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
-
+import "./orderdetails.css";
 const OrderDetails = ({quantity, product, address}) => {
 
 	const theme = useTheme();
 
 	return (
-		<Card style={{width: "80%"}}>
+		<Card className="cardcontentwrap">
 			<CardContent>
-				<Grid container style={{paddingTop: "5%", paddingBottom: "5%"}}>
-					<Grid item xs={7} style={{paddingRight: "1%"}}>
-						<div style={{display: 'flex', justifyContent: 'left'}}>
+				<Grid container className="griditem">
+					<Grid item xs={7} className="pr">
+						<div className="gridpl">
 							<Grid container>
 								<Grid item xs={12}>
 									<Typography variant={"h4"}>
 										{product.name}
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="pt">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -30,7 +30,7 @@ const OrderDetails = ({quantity, product, address}) => {
 										Quantity: <b>{quantity}</b>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="pt">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -40,7 +40,7 @@ const OrderDetails = ({quantity, product, address}) => {
 										category: <b>{product.category}</b>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="pt">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -51,7 +51,7 @@ const OrderDetails = ({quantity, product, address}) => {
 										<em>{product.description}</em>
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="pt">
 									<Typography
 										variant={"body1"}
 										style={{
@@ -66,14 +66,14 @@ const OrderDetails = ({quantity, product, address}) => {
 						</div>
 					</Grid>
 					<Grid item xs={5}>
-						<div style={{display: 'flex', justifyContent: 'left'}}>
+						<div className="gridpl">
 							<Grid container>
 								<Grid item xs={12}>
 									<Typography variant={"h4"}>
 										Address Details :
 									</Typography>
 								</Grid>
-								<Grid item xs={12} style={{paddingTop: "2%"}}>
+								<Grid item xs={12} className="pt">
 									<Typography
 										variant={"body1"}
 										style={{

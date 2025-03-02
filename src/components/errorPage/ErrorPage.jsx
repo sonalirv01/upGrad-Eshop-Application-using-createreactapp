@@ -4,6 +4,7 @@ import Grid from "@mui/material/Grid";
 import LocationOffOutlinedIcon from '@mui/icons-material/LocationOffOutlined';
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
+import "./errorpage.css";
 
 const ErrorPage = () => {
 	return (
@@ -12,16 +13,10 @@ const ErrorPage = () => {
 				<Grid container item spacing={3}>
 					<Grid item xs={4}/>
 					<Grid item xs={4}>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "10%"}}>
-							<LocationOffOutlinedIcon style={{
-								display: 'inline-block',
-								borderRadius: '60px',
-								padding: '0.6em 0.6em',
-								color: '#ffffff',
-								background: "#f50057"
-							}}/>
+						<div className="itemwrapsection">
+							<LocationOffOutlinedIcon className="locationofout"/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="typographywrap">
 							<Typography
 								variant="subtitle1"
 								noWrap

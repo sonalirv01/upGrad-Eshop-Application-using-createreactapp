@@ -13,6 +13,7 @@ import CircularProgress from '@mui/material/CircularProgress';
 import {doSignup} from "../../api/userAuthAPIs";
 import useAuthentication from "../../hooks/useAuthentication";
 import useServices from "../../hooks/useServices";
+import "./signup.css";
 
 const SignUp = () => {
 
@@ -194,16 +195,10 @@ const SignUp = () => {
 					<Grid container item spacing={3}>
 						<Grid item xs={4}/>
 						<Grid item xs={4}>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "10%"}}>
-								<LockOutlinedIcon style={{
-									display: 'inline-block',
-									borderRadius: '60px',
-									padding: '0.6em 0.6em',
-									color: '#ffffff',
-									background: "#f50057"
-								}}/>
+							<div className="lookoutline">
+								<LockOutlinedIcon className="lockoutlinewrap"/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center'}}>
+							<div className="typographywrp">
 								<Typography
 									variant="subtitle1"
 									noWrap
@@ -215,7 +210,7 @@ const SignUp = () => {
 									Sign up
 								</Typography>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="firstName"
 										   label="First Name *"
 										   variant="outlined"
@@ -227,7 +222,7 @@ const SignUp = () => {
 										   helperText={formData.firstName.error && formData.firstName.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="lastName"
 										   label="Last Name *"
 										   variant="outlined"
@@ -239,7 +234,7 @@ const SignUp = () => {
 										   helperText={formData.lastName.error && formData.lastName.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="email"
 										   label="Email Address *"
 										   variant="outlined"
@@ -252,7 +247,7 @@ const SignUp = () => {
 										   helperText={formData.email.error && formData.email.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="password"
 										   label="Password *"
 										   variant="outlined"
@@ -265,7 +260,7 @@ const SignUp = () => {
 										   helperText={formData.password.error && formData.password.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="confirmPassword"
 										   label="Confirm Password *"
 										   variant="outlined"
@@ -278,7 +273,7 @@ const SignUp = () => {
 										   helperText={formData.confirmPassword.error && formData.confirmPassword.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<TextField id="contactNumber"
 										   label="Contact Number *"
 										   variant="outlined"
@@ -290,7 +285,7 @@ const SignUp = () => {
 										   helperText={formData.contactNumber.error && formData.contactNumber.errorMessage}
 								/>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+							<div className="textfeieldarea">
 								<Button variant="contained"
 										color="primary"
 										fullWidth
@@ -299,7 +294,7 @@ const SignUp = () => {
 									SIGN UP
 								</Button>
 							</div>
-							<div style={{display: 'flex', justifyContent: 'right', marginTop: "30px"}}>
+							<div className="loginwrp">
 								<Link to="/login">
 									<Typography variant="body1">
 										Already have an account? Sign in

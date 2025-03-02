@@ -10,6 +10,8 @@ import {Card, CardContent, CardMedia, useTheme} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import useServices from "../../hooks/useServices";
+import "./productdetails.css";
+
 
 const ProductDetails = () => {
 
@@ -126,20 +128,16 @@ const ProductDetails = () => {
 			<Grid container spacing={1}>
 				<Grid container item spacing={3}>
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="productcategorywarp">
 							<ProductCategory />
 						</div>
 					</Grid>
 					<Grid item xs={12} sx={{ display: { xs: 'none', md: 'none', lg: "flex" }}}>
-						<div style={{display: 'flex', justifyContent: 'center', padding: "5% 20% 0% 20%"}}>
+						<div className="gridcontainerwrp">
 							<Grid container>
 								<Grid item xs={4}>
 									<img
-										style={{
-											maxWidth: "300px",
-											width: "100%",
-											height: "400px",
-										}}
+										className="imgstyle"
 										src={json.imageUrl}
 										alt={"Image of " + json.name}
 									/>
@@ -148,11 +146,11 @@ const ProductDetails = () => {
 								<Grid item xs={7}>
 									<Grid container>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left'}}>
+											<div className="typographywap">
 												<Typography variant={"h4"}>
 													{json.name}
 												</Typography>
-												<div style={{paddingLeft: "4%"}}>
+												<div className="pl">
 													<Typography
 														variant={"body1"}
 														style={{
@@ -169,7 +167,7 @@ const ProductDetails = () => {
 											</div>
 										</Grid>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left'}}>
+											<div className="typographywap">
 												<Typography
 													variant={"body1"}
 													style={{
@@ -181,7 +179,7 @@ const ProductDetails = () => {
 											</div>
 										</Grid>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left'}}>
+											<div className="typographywap">
 												<Typography
 													variant={"body1"}
 													style={{
@@ -193,7 +191,7 @@ const ProductDetails = () => {
 											</div>
 										</Grid>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left'}}>
+											<div className="typographywap">
 												<Typography
 													variant={"h5"}
 													style={{
@@ -206,7 +204,7 @@ const ProductDetails = () => {
 											</div>
 										</Grid>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left', paddingTop: "4%", width: "50%"}}>
+											<div className="textfieldarea">
 												<TextField
 													id="count"
 													label="Enter Quantity *"
@@ -221,7 +219,7 @@ const ProductDetails = () => {
 											</div>
 										</Grid>
 										<Grid item xs={12}>
-											<div style={{display: 'flex', justifyContent: 'left', paddingTop: "4%"}}>
+											<div className="flexwrp">
 												<Button variant="contained"
 														color="primary"
 														onClick={() => placeOrder()}
@@ -238,8 +236,8 @@ const ProductDetails = () => {
 					<Grid item xs={12} sx={{ display: { xs: 'flex', md: 'flex', lg: "none" }}}>
 						<Grid container>
 							<Grid item xs={12}>
-								<div style={{display: 'flex', justifyContent: 'center', paddingTop: "2%"}}>
-									<Card style={{width: "450px"}}>
+								<div className="cardtop">
+									<Card className="wd">
 										<CardMedia
 											sx={{height: 200}}
 											image={json.imageUrl}
@@ -248,11 +246,11 @@ const ProductDetails = () => {
 										<CardContent>
 											<Grid container>
 												<Grid item xs={9}>
-													<div style={{display: 'flex', justifyContent: 'left'}}>
+													<div className="typographywap">
 														<Typography gutterBottom variant="h6" component="div">
 															{json.name}
 														</Typography>
-														<div style={{paddingLeft: "4%"}}>
+														<div className="pl">
 															<Typography
 																variant={"body1"}
 																style={{
@@ -268,7 +266,7 @@ const ProductDetails = () => {
 													</div>
 												</Grid>
 												<Grid item xs={3}>
-													<div style={{display: 'flex', justifyContent: 'right'}}>
+													<div className="mr">
 														<Typography
 															gutterBottom
 															variant="h6"
@@ -285,7 +283,7 @@ const ProductDetails = () => {
 											<Typography variant="body2" color="text.secondary" sx={{height: 80}}>
 												{json.description}
 											</Typography>
-											<div style={{display: 'flex', justifyContent: 'left', paddingTop: "4%"}}>
+											<div className="flexwrp">
 												<TextField
 													id="count"
 													label="Enter Quantity *"
@@ -298,7 +296,7 @@ const ProductDetails = () => {
 													helperText={formData.count.error && formData.count.errorMessage}
 												/>
 											</div>
-											<div style={{display: 'flex', justifyContent: 'left', paddingTop: "4%"}}>
+											<div className="flexwrp">
 												<Button
 													variant="contained"
 													color="primary"

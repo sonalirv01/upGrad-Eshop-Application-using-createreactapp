@@ -15,6 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import {useNavigate} from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
+import "./address.css";
 
 const Address = ({callbackFunction, address}) => {
 
@@ -275,7 +276,7 @@ const Address = ({callbackFunction, address}) => {
 			<Grid container spacing={1}>
 				<Grid container item spacing={3}>
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="selectaline">
 							<FormControl sx={{ m: 1, width: "60%" }}>
 								<InputLabel id="demo-simple-select-label">Select Address</InputLabel>
 								<Select
@@ -329,7 +330,7 @@ const Address = ({callbackFunction, address}) => {
 						</div>
 					</Grid>
 					<Grid item xs={12}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="selectaline">
 							<Typography
 								variant="subtitle1"
 								noWrap
@@ -346,8 +347,8 @@ const Address = ({callbackFunction, address}) => {
 				<Grid container item spacing={3}>
 					<Grid item xs={4}/>
 					<Grid item xs={4}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
-							<Typography
+						<div className="selectaline">
+					<Typography
 								variant="subtitle1"
 								noWrap
 								sx={{
@@ -358,7 +359,7 @@ const Address = ({callbackFunction, address}) => {
 								Add Address
 							</Typography>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="name"
 									   label="Name *"
 									   variant="outlined"
@@ -370,7 +371,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.name.error && formData.name.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="contactNumber"
 									   label="Contact Number *"
 									   variant="outlined"
@@ -382,7 +383,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.contactNumber.error && formData.contactNumber.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="street"
 									   label="Street *"
 									   variant="outlined"
@@ -394,7 +395,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.street.error && formData.street.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="city"
 									   label="City *"
 									   variant="outlined"
@@ -406,7 +407,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.city.error && formData.city.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="state"
 									   label="State *"
 									   variant="outlined"
@@ -418,7 +419,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.state.error && formData.state.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="landmark"
 									   label="Landmark"
 									   variant="outlined"
@@ -430,7 +431,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.landmark.error && formData.landmark.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<TextField id="zipcode"
 									   label="Zip Code *"
 									   variant="outlined"
@@ -442,7 +443,7 @@ const Address = ({callbackFunction, address}) => {
 									   helperText={formData.zipcode.error && formData.zipcode.errorMessage}
 							/>
 						</div>
-						<div style={{display: 'flex', justifyContent: 'center', marginTop: "30px"}}>
+						<div className="textfield_wrap">
 							<Button variant="contained"
 									color="primary"
 									fullWidth

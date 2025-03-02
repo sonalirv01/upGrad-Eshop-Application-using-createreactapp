@@ -22,7 +22,7 @@ const ProductCard = ({mode, deleteProduct, modifyProduct, buyProduct, ...details
 			return (
 				<>
 					<Grid item xs={2}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="iconButtonwrap">
 							<IconButton
 								aria-label="Modify"
 								onClick={() => modifyProduct(details)}
@@ -32,7 +32,7 @@ const ProductCard = ({mode, deleteProduct, modifyProduct, buyProduct, ...details
 						</div>
 					</Grid>
 					<Grid item xs={2}>
-						<div style={{display: 'flex', justifyContent: 'center'}}>
+						<div className="iconbtnwrap">
 							<IconButton
 								aria-label="Delete"
 								onClick={() => deleteProduct(details)}
@@ -49,29 +49,25 @@ const ProductCard = ({mode, deleteProduct, modifyProduct, buyProduct, ...details
 	};
 
 	return (
-		<Card style={{height: "400px", width: "345px"}}>
+		<Card className="cardmedia">
 			<CardMedia sx={{height: "200px", display: "flex", justifyContent: "center"}}>
-				<img
+				<img className="imgmedia"
 					src={details.imageUrl}
 					alt={"Image of " + details.name}
-					style={{
-						maxWidth: "150px",
-						width: "100%",
-						height: "200px",
-					}}
+					
 				/>
  			</CardMedia>
 			<CardContent>
 				<Grid container>
 					<Grid item xs={9}>
-						<div style={{display: 'flex', justifyContent: 'left'}}>
+						<div className="typographyleft">
 							<Typography gutterBottom variant="h6" component="div" className="wrap_text" title={details.name}>
 								{details.name}
 							</Typography>
 						</div>
 					</Grid>
 					<Grid item xs={3}>
-						<div style={{display: 'flex', justifyContent: 'right'}}>
+						<div className="typographyright">
 							<Typography gutterBottom variant="h6" component="div" className="wrap_text" title={'\u20B9 ' + details.price}>
 								{'\u20B9 ' + details.price}
 							</Typography>
@@ -85,7 +81,7 @@ const ProductCard = ({mode, deleteProduct, modifyProduct, buyProduct, ...details
 			<CardActions>
 				<Grid container>
 					<Grid item xs={8}>
-						<div style={{display: 'flex', justifyContent: 'left'}}>
+						<div className="typographyleft">
 							<Button
 									variant="contained"
 									color="primary"

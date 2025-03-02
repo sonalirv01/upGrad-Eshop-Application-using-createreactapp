@@ -16,6 +16,7 @@ import Button from "@mui/material/Button";
 import AppBar from "@mui/material/AppBar";
 import {useContext, useState} from "react";
 import useAuthentication from "../../hooks/useAuthentication";
+import "./navigationbar.css";
 
 const NavigationBar = () => {
 
@@ -112,7 +113,7 @@ const NavigationBar = () => {
 								if (element.visible) {
 									return (
 										<MenuItem key={"menu_item_" + element.id} onClick={handleCloseNavMenu}>
-											<Link key={"link_" + element.id} to={element.url} style={{textDecoration: "none"}}>
+											<Link key={"link_" + element.id} to={element.url} className="linkdecoration">
 												<Typography textAlign="center">{element.label}</Typography>
 											</Link>
 										</MenuItem>
@@ -156,7 +157,7 @@ const NavigationBar = () => {
 						{pages.map((element) => {
 							if (element.visible) {
 								return (
-									<Link key={"main_link_" + element.id} to={element.url} style={{ textDecoration: "none" }}>
+									<Link key={"main_link_" + element.id} to={element.url} className="linkdecoration">
 										<Button
 											key={"button_link_" + element.id}
 											sx={{ my: 2, color: 'white', display: 'block', textTransform: "none" }}
